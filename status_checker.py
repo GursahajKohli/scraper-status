@@ -65,8 +65,8 @@ for link in gursahaj_merged:
     else:
         rejected_url.append(link)
 
-html_page = "<html><body><h1>Scraper summary"
-table = "<table><tr><th>Company</th><th>Status</ht></tr>"
+html_page = "<html><body><h1 style="text-align:center;">Scraper summary"
+table = "<table style="text-align:center;"><tr><th>Company</th><th>Status</ht></tr>"
 for i in accepted_url:
     table = table + "<tr><td>" + i + "</td><td>Successful</td></tr>"
 for i in rejected_url:
