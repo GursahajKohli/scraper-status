@@ -31,17 +31,17 @@ jobs:
     - name: Test with pytest
       run: |
         python status_checker.py
-    - name: Commit XMLs on gh-pages
+    - name: Commit HTML on gh-pages
       run: |
           git fetch --all
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Action"
           git add ./*.html
-          git stash push -m xmls ./*.xml
+          git stash push -m html ./*.html
           git checkout gh-pages
           git pull origin gh-pages --rebase
           git cherry-pick -n -m1 -Xtheirs stash
-          git commit -m "Update XMLs"
+          git commit -m "Update HTML"
     - name: Push changes
       uses: ad-m/github-push-action@v0.6.0
       with:
