@@ -15,10 +15,10 @@ for link in gursavid_separate:
     response = requests.get(url)
 
     if response.status_code == 404:
-        rejected_url.append(link)
+        rejected_url.append(link.capitalize())
 
     else:
-        accepted_url.append(link)
+        accepted_url.append(link.capitalize())
 
 
 #checking for merged url
