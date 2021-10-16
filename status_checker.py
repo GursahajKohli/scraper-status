@@ -1,4 +1,5 @@
 import requests
+from datetime import date
 
 gursavid_separate = ["accenture", "bmo", "deloitte", "ey", "google", "kpmg", "loblaw", "rbc", "roche", "td"]
 gursavid_merged = ["Ada", "Air Canada", "EllisDon", "Georgian", "Ada", "Magna International", "BenchSci", "Air Canada", "Clearpath", "integrate.ai", "Borealis AI", "CN Internship", "Scotiabank", "Delphia", "CN", "Intact Financial Corporation", "Deep Genomics", "League"]
@@ -65,7 +66,10 @@ for link in gursahaj_merged:
     else:
         rejected_url.append(link)
 
+        
+today = date.today()
 html_page = "<html><body><img src = './vectorlogo.png' style='width:60px;height:60px;'><h1 style='text-align:center;'>Scraper summary<br><br>"
+html_page = "<p> Website updated on : " + today + " </p><br><br>"
 table = "<table align='center'><tr><th>Company</th><th>Status</ht></tr>"
 for i in accepted_url:
     table = table + "<tr><td>" + i + "</td><td>Successful</td></tr>"
