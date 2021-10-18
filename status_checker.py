@@ -37,7 +37,7 @@ for link in gursavid_merged:
         rejected_url.append(link)
 
 gursahaj_separate = ["Borealis%20AI", "CIBC", "Manulife", "Sun%20Life%20Financial", "Thomson%20Reuters", "Vector%20Institute"]
-gursahaj_merged = ["Canvass Analytics Inc.", "OMERS", "Thales", "NVIDIA", "Shopify Inc."]
+gursahaj_merged = ["Canvass Analytics Inc.", "OMERS", "Thales", "NVIDIA", "Shopify Inc.", "TELUS"]
 
 for link in gursahaj_separate:
 
